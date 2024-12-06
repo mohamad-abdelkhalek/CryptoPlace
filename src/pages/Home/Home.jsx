@@ -37,8 +37,11 @@ const Home = () => {
               <p>{item.market_cap_rank}</p>
               <div>
                 <img src={item.image} alt="Coin image" />
-                <p>{item.name + " - " + item.symbol}</p>
+                <p>{item.name + " - " + item.symbol.toUpperCase()}</p>
               </div>
+              <p>{currency.symbol} {item.current_price.toLocaleString()}</p>
+              <p>{Math.floor(item.price_change_percentage_24h*100)/100}</p>
+              <p className='market-cap'>{currency.symbol} {item.market_cap.toLocaleString()}</p>
             </div>
           ))
         }
