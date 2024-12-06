@@ -1,4 +1,4 @@
-const { createContext, useState, useEffect } = require("react");
+import { createContext, useState, useEffect } from "react";
 
 export const CoinContext = createContext();
 
