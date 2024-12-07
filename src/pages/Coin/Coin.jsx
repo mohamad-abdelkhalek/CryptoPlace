@@ -29,7 +29,7 @@ const Coin = () => {
       headers: {accept: 'application/json', 'x-cg-demo-api-key': 'CG-BB7K3SpjGBWPABagbnsMwbqX'}
     };
     
-    fetch(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${currency.name}&days=10`, options)
+    fetch(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${currency.name}&days=10&interval=daily`, options)
       .then(res => res.json())
       .then(res => setHistoricalData(res))
       .catch(err => console.error(err));
